@@ -1,0 +1,44 @@
+{
+  "name": "lead-nexus-software",
+  "version": "1.0.0",
+  "main": "server.ts",
+  "scripts": {
+    "start": "tsx watch server.ts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^20.14.6",
+    "bcryptjs": "^2.4.3",
+    "bootstrap-icons": "^1.11.3",
+    "connect-flash": "^0.1.1",
+    "connect-mongo": "^5.1.0",
+    "csurf": "^1.11.0",
+    "dotenv": "^16.4.5",
+    "ejs": "^3.1.10",
+    "express": "^4.19.2",
+    "express-session": "^1.18.0",
+    "file-saver": "^2.0.5",
+    "helmet": "^7.1.0",
+    "html2pdf.js": "^0.10.1",
+    "i": "^0.3.7",
+    "jspdf": "^2.5.1",
+    "mongoose": "^8.3.4",
+    "multer": "^1.4.5-lts.1",
+    "nodemon": "^3.1.0",
+    "sass": "^1.77.4",
+    "table2excel": "^1.0.4",
+    "tsx": "^4.15.6",
+    "validator": "^13.12.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ScsDigitalBusiness/Lead-Nexus-Oficial-.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ScsDigitalBusiness/Lead-Nexus-Oficial-/issues"
+  },
+  "homepage": "https://github.com/ScsDigitalBusiness/Lead-Nexus-Oficial-#readme",
+  "description": ""
+}
