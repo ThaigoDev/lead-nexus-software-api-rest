@@ -19,7 +19,7 @@ router.post("/register",LoginAndSignUpController.createAccount);
 router.get("/leads/index/logout",HomeController.logout);  
 
 //leads API ROUTES   
-router.get("c",HomeController.getAllLeads); 
+router.get("/leads/all",HomeController.getAllLeads); 
 router.post("/leads/create/", uploads.single('photoLead'),HomeController.create); 
 //delete 
 router.post("/leads/delete/:id",HomeController.deleteLead);  
