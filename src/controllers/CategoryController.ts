@@ -3,16 +3,10 @@ const Category = require("../models/CategoryMOdel.ts");
 abstract class CategoryController {
    public static async getAllCategory(req: any, res: any) {
       try {
-         if (!req.session.user) {
-            res.status(401).json({
-               status: 'failed',
-               error: "Bad! You not have Permission!"
-            })
-         } else {
+          
             const category = new Category(req.body);
             const categories = await category.getAllCategory();
             res.status(200).json(categories);
-         }
       } catch (e: any) {
          res.status(500).json({
             status: "failed",

@@ -4,16 +4,10 @@ const Product = require("../models/ProductAndServiceModel.ts");
 abstract class HomeController {
   public static async getAllLeads(req: any, res: any) {
     try {
-      if (req.session.user) {
         const leads = new Leads(req.body, req.session.user);
         const allLeads = await leads.getLeads();
         res.status(201).json(allLeads);
-      } else {
-        res.status(401).json({
-          status: "failed",
-          error: "Bad! You not have Permission!",
-        });
-      }
+       
     } catch (e: any) {
       res.status(500).json({
         status: "failed",

@@ -3,15 +3,9 @@ abstract class ProcessController {
   
   public static async getAllProcess (req:any,res:any) : Promise<any> {
     try { 
-      if(req.session.user) {
-        const process = new Process(req.body);  
+        const process = new Process(req.body);   
         res.status(201).json(process);
-      }else  {
-        res.status(401).json({
-           status: 'failed',
-           error: "Bad! You not have Permission!"
-        })
-      }
+       
       
     }catch(e:any){
       res.status(500).json({

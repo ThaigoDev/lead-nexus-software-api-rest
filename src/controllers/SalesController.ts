@@ -7,16 +7,10 @@ const Sales = require("../models/SalesModel.ts");
 abstract class SalesController {
     public static async getSales(req: any, res: any) {
         try {
-            if (req.session.user && req.session.user.office === "Administrador") {
                 const SalesModel = new Sales(req.body);
                 const allSales = await SalesModel.getAllSales();
                 res.status(200).json(allSales);
-            } else {
-                res.status(401).json({
-                    status: 'failed',
-                    error: "Bad! You not have Permission!"
-                })
-            }
+              
         } catch (e: any) {
             res.status(500).json({
                 status: "failed", 

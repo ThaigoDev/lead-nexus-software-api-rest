@@ -6,16 +6,11 @@ const Process = require("../models/ProcessModel.ts");
 abstract class ProductsController {
   public static async getAllProducts(req: any, res: any): Promise<any> {
     try {
-      if (req.session.user) {
+    
         const productModel = new Product(req.body);
         const allProducts = await productModel.getProducts();
         res.status(201).json(allProducts);
-      } else {
-        res.status(401).json({
-          status: "failed",
-          error: "Bad! You not have Permission!",
-        });
-      }
+       
     } catch (e: any) {
       res.status(500).json({
         status: "failed",
