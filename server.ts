@@ -4,7 +4,8 @@ const router = require('./routes.ts');
 const path = require('path');  
 const session = require('express-session');  
 const MongoStore = require('connect-mongo');   
-const  helmet = require ("helmet"); 
+const  helmet = require ("helmet");  
+const cors = require("cors")
 const csrf = require("csurf"); 
 const flash  = require('connect-flash');    
 require('dotenv').config(); 
@@ -41,7 +42,8 @@ const sessionOptions = session({
 }) 
 //app.use(csrf()); 
 app.use(sessionOptions); 
-app.use(flash()); 
+app.use(flash());  
+app.use(cors());
 app.use(globalMiddleware);  
 /*app.use(checkCsrfError);  
 app.use(csrfMiddleware);  */
